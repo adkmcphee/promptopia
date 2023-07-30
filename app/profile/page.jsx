@@ -9,6 +9,8 @@ import Profile from '@components/profile';
 
 const MyProfile = () => {
 
+  const router = useRouter();
+
   const {data: session} = useSession();
 
   const [posts, setPosts] = useState([]);
@@ -25,6 +27,7 @@ const MyProfile = () => {
 
 
   const handleEdit = () => {
+    router.push(`/update-prompt?id=${post._id}`)
 
   }
 
